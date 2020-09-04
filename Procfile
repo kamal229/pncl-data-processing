@@ -1,1 +1,1 @@
-web: guincorn flaskblog:app
+web: guincorn src.flaskblog:app
