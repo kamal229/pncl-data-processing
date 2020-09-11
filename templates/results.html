@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block content%}
+
+<style>
+#parameters {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#parameters td, #parameters th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#parameters tr:nth-child(even){background-color: #f2f2f2;}
+
+#parameters tr:hover {background-color: #ddd;}
+
+#parameters th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+
+<table id="parameters">
+  <tr>
+    <th>Measure</th>
+    <th>Sample</th>
+    <th>Novel</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>Number of visits</td>
+    <td>3</td>
+    <td>4</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Total time spent exploring objects, s</td>
+    <td>23</td>
+    <td>22</td>
+    <td>45</td>
+  </tr>
+  <tr>
+    <td>Mean length of visit, s/visit</td>
+    <td>7.7</td>
+    <td>5.5</td>
+    <td>6.4</td>
+  </tr>
+  <tr>
+    <td>Standard deviation of visit length, s</td>
+    <td>6.5</td>
+    <td>4.5</td>
+    <td>5.1</td>
+  </tr>
+  <tr>
+    <td>Latency to first visit, s</td>
+    <td>10</td>
+    <td>26</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Latency to the last visit, s</td>
+    <td>7</td>
+    <td>20</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Recognition Index (time novel/total time)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>22/45 = 0.49</td>
+  </tr>
+  <tr>
+    <td>Crown-rump length, cm</td>
+    <td>-</td>
+    <td>-</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Total distance moved, m</td>
+    <td>-</td>
+    <td>-</td>
+    <td>{{ data["total_distance"] }}</td>
+  </tr>
+  <tr>
+    <td>Average speed, m/s</td>
+    <td>-</td>
+    <td>-</td>
+    <td>{{ data["average_speed"] }}</td>
+  </tr>
+</table>
+
+<p>*** MOST VALUES DISPLAYED IN THIS TABLE ARE STATIC AND HAVE NOT ACTUALLY BEEN CALCULATED. THIS TABLE IS FOR DEMONSTRATION PURPOSES ONLY! ***</p>
+
+{% endblock content%}

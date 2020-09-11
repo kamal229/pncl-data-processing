@@ -1,8 +1,23 @@
 {% extends "layout.html" %}
 {%block content%}
-	{% for post in posts %}
-		<h1>{{ post.title }}</h1>
-		<p>By {{post.author}} on {{post.date_posted}} </p>
-		<p> {{post.content}} </p>
-	{% endfor %}
+
+<div class="row">
+	<div class="col">
+		
+		<h1>Upload Loopy annotated data</h1>
+
+		<form method="POST" action="/results" enctype="multipart/form-data">
+			
+			<div class="form-group">
+					<label>Select file</label>
+						<div class="custom-file">
+						<input type="file" class="custom-file-input" name="inputFile" id="inputFile" />
+						<label class="custom-file-label" for="file">Select file...</label>
+						</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+</div>
+
 {% endblock content%}
